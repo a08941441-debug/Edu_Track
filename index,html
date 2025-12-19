@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>EduTrack</h1>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>تسجيل الغياب</h2>
+            <input type="text" id="studentName" placeholder="اسم الطالب">
+            <select id="attendanceStatus">
+                <option value="حاضر">حاضر</option>
+                <option value="غائب">غائب</option>
+            </select>
+            <button onclick="addAttendance()">إرسال الغياب</button>
+
+            <table id="attendanceTable">
+                <tr>
+                    <th>الاسم</th>
+                    <th>الحالة</th>
+                </tr>
+            </table>
+        </section>
+
+        <section class="dashboard">
+            <h2>المخالفات السلوكية</h2>
+            <input type="text" id="behaviorStudent" placeholder="اسم الطالب">
+            <input type="text" id="behaviorNote" placeholder="المخالفة / الملاحظة">
+            <button onclick="addBehavior()">إرسال المخالفة</button>
+
+            <table id="behaviorTable">
+                <tr>
+                    <th>الاسم</th>
+                    <th>المخالفة</th>
+                </tr>
+            </table>
+        </section>
+
+        <section class="dashboard">
+            <h2>الحاجات السيئة / مشاكل أخرى</h2>
+            <input type="text" id="problemStudent" placeholder="اسم الطالب">
+            <input type="text" id="problemNote" placeholder="الوصف">
+            <button onclick="addProblem()">إرسال المشكلة</button>
+
+            <table id="problemTable">
+                <tr>
+                    <th>الاسم</th>
+                    <th>الوصف</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 EduTrack</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
